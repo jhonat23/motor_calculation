@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="tool for AC-motor calculation">
+    <link rel="stylesheet" href="./style.css">
+    <title>AC-motor calculation tool</title>
+</head>
+<body>
+    <header class="he">
+        <h1 class="title">Calculation of AC-motor load current</h1>
+    </header>
+    <main>       
+        <section class="sec1">
+            <header class="he2">
+                <p>Use this tool for estimate current load of AC-motors. If have the motor's datasheet you can compare this results with his data. This is the basis for the selection of motor protection.</p>
+            </header>
+            <form class="form1">
+                <label for="motorVoltage">Motor's Voltage</label>
+                <input id="motorVoltage" type="number">
+                <label>V</label>
+                <label for="PF">Power Factor</label>
+                <input id="PF" type="number">
+                <label for="power">Power</label>
+                <input id="power" type="number">
+                <label>kW</label>
+                <label for="efficiency">Efficiency</label>
+                <input id="efficiency" type="number">
+                <label>%</label>
+                <button type="button" onclick="iLoad()">Calculate</button>
+            </form>
+        </section>
+    </main>
+    <script src="./AC_motor_cal.js"></script>
+</body>
+</html>
