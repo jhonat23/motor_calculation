@@ -20,17 +20,20 @@
             <form class="form1">
                 <label for="motorVoltage">Motor's Voltage</label>
                 <input id="motorVoltage" type="number">
-                <label>V</label>
-                <label for="PF">Power Factor</label>
-                <input id="PF" type="number">
+                <span>V</span>
                 <label for="power">Power</label>
                 <input id="power" type="number">
-                <label>kW</label>
+                <span>kW</span>
+                <label for="PF">Power Factor</label>
+                <input id="PF" type="number">
                 <label for="efficiency">Efficiency</label>
                 <input id="efficiency" type="number">
-                <label>%</label>
+                <span>%</span>
                 <button type="button" onclick="iLoad()">Calculate</button>
             </form>
+            <section class="secResult">
+                <p id="iResult"></p>
+            </section>
         </section>
     </main>
     <script src="./AC_motor_cal.js"></script>

@@ -8,7 +8,7 @@
 // console.log(I);
 
 function MotorLoad(mVoltage, pw, pf, n){
-    const I = (pw * 1000) / (mVoltage * pf * n *Math.sqrt(3));
+    const I = (pw * 1000) / (mVoltage * pf * (n / 100) *Math.sqrt(3));
     return I;
 }
 function iLoad(){
@@ -24,7 +24,10 @@ function iLoad(){
     const n = document.getElementById("efficiency");
     const ef = n.value;
 
-    const Imot = MotorLoad(MV, pw, pf, ef);
-    alert(Imot);
+    const Imot = Math.round(MotorLoad(MV, pw, pf, ef) * 100) /100;
+    //alert(Imot);
+
+    const resultI = document.getElementById("iResult");
+    resultI.innerText = "Motor load " + Imot + "A";
 }
 
