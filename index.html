@@ -10,7 +10,7 @@
 </head>
 <body>
     <header class="he">
-        <h1 class="title">Calculation of AC-motor load current</h1>
+        <h1 class="title">Calculation of 3-phase AC-motor load current</h1>
     </header>
     <main>       
         <section class="sec1">
@@ -18,17 +18,17 @@
                 <p>Use this tool for estimate current load of AC-motors. If have the motor's datasheet you can compare this results with his data. This is the basis for the selection of motor protection.</p>
             </header>
             <form class="form1">
-                <label for="motorVoltage">Motor's Voltage</label>
+                <label for="motorVoltage">Motor's Voltage (V)</label>
                 <input id="motorVoltage" type="number">
-                <span>V</span>
-                <label for="power">Power</label>
+                <!-- <span>V</span> -->
+                <label for="power">Power (kW)</label>
                 <input id="power" type="number">
-                <span>kW</span>
+                <!-- <span>kW</span> -->
                 <label for="PF">Power Factor</label>
                 <input id="PF" type="number">
-                <label for="efficiency">Efficiency</label>
+                <label for="efficiency">Efficiency (%)</label>
                 <input id="efficiency" type="number">
-                <span>%</span>
+                <!-- <span>%</span> -->
                 <button type="button" onclick="iLoad()">Calculate</button>
             </form>
             <section class="secResult">
